@@ -18,10 +18,11 @@ article{
 	margin: 0 auto;
 }
 
-@media (min-width: 1200px){
+@media (max-width: 480px){
 	section,
 	article{
-		max-width: 55rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 }
 
