@@ -1,0 +1,18 @@
+
+@import '../../jockstrap';
+
+header > h1 {
+	text-align: center;
+	margin: 0;
+	padding: 5rem 0;
+	background: $highlight-color;
+	background: radial-gradient( lighten($highlight-color, 10) , $highlight-color );
+	color: lighten($highlight-color, 40);
+}
+
+
+section,
+article{
+	padding-left: 2rem;
+	padding-right: 2rem;
+}

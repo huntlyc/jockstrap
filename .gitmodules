@@ -1,0 +1,3 @@
+[submodule "docs/Sassy-Grid"]
+	path = docs/Sassy-Grid
+	url = git@github.com:huntlyc/Sassy-Grid.git

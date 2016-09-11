@@ -1,0 +1,226 @@
+/*! jockstrap.css | MIT License | github.com/huntlyc/jockstrap */
+
+@import 'normalize';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600|Raleway:400,600|Inconsolata:400,700';
+
+$primary-font: 'Open Sans', sans-serif;
+$header-font: 'Raleway', sans-serif;
+$base-colour: rgb(50,50,50);
+$highlight-color: rgb(250, 0, 150);
+
+
+
+
+html, body {
+	height: 100%;
+}
+
+
+/**
+ * Apply base body font styles, set optimizeLegibility and normal font-kerning
+ */
+body{
+	color: $base-colour;
+	font-size: 18px;
+	font-family: $primary-font;
+	line-height: 1.4;
+	text-rendering: optimizeLegibility;
+	font-kerning: normal;
+}
+
+/**
+ * Because of the fonts used, override default bold font weight.
+ * If not using default fonts, remove
+ */
+strong{
+	font-weight: 600;
+}
+
+/** Code and pre use Inconsolata which has 700 as the bold font weight **/
+code strong,
+pre strong{
+	font-weight: 700;
+}
+
+section{
+	padding-top: 2rem;
+	padding-bottom: 1.5rem;
+}
+
+/**
+ * set a comfortable space between headers and setup slight letter spacing
+ * to improve readability.
+ */
+h1,h2,h3,h4,h5,h6{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-weight: normal;
+	font-family: $header-font;
+	color: $highlight-color;
+	letter-spacing: 0.02em;
+}
+
+/** H1 to H6 are decriment in -0.2rem intervals from 2rem **/
+h1{
+	font-size: 2rem;
+}
+
+h2{
+
+    font-size: 1.8rem;
+}
+
+h3{
+	font-size: 1.6rem;
+}
+
+h4{
+	font-size: 1.4rem;
+}
+
+h5{
+	font-size: 1.2rem;
+}
+
+h6{
+	font-size: 1rem;
+}
+
+/** paragraph padding bottom is 1.5 to combat line-height to keep it at 2rem */
+p{
+	padding-bottom: 1.6rem;
+}
+
+/**
+ * Utility classes, should be straight forward
+ */
+img.responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.center-text{
+	text-align: center;
+}
+
+/**
+ * default link behaviour - don't underline until hovered/active/focused and
+ * lighten font coler when hovered/active/focused
+ */
+a{
+	color: $highlight-color;
+	text-decoration: none;
+	transition: color 0.2s linear;
+
+	&:hover,
+	&:focus,
+	&:active{
+		color: lighten($highlight-color, 20);
+		text-decoration: none;
+	}
+}
+
+/**
+ * Button style class
+ */
+.btn{
+	display: inline-block;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	background-color: $highlight-color;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	transition: background-color 0.2s linear;
+
+	&:hover,
+	&:active,
+	&:focus{
+		color: #fff;
+		background-color: lighten($highlight-color, 10);
+	}
+
+}
+
+/**
+ * center aligned horizontal nav with fancy hover/active/focus state
+ */
+nav{
+	box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3);
+	text-align: center;
+	ul{
+		display: inline-block;
+		list-style-type: none;
+		text-align: center;
+		font-weight: 600;
+
+		li{
+			display: inline-block;
+			padding: 1.2rem 1rem 1.1rem 1rem;
+
+			a{
+				text-transform: uppercase;
+				color: $base-colour;
+
+				&:hover,
+				&:active,
+				&:focus{
+					color: lighten($base-colour, 20);
+				}
+
+				// Fancy underline based of: https://codepen.io/VoxelDavid/pen/Afeoh
+
+				&:after{
+					content: "";
+					display: block;
+					width: 100%;
+					height: 0;
+					padding-bottom: 0.1rem;
+					background-color: $highlight-color;
+					transform: scaleX(0);
+					transition: transform 0.1s linear;
+
+				}
+
+				&:hover:after,
+				&:active:after,
+				&:focus:after{
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Shallow strip footer to show credits
+ */
+footer{
+	background-color: $highlight-color;
+	color: lighten($highlight-color, 80);
+	font-size: 0.8rem;
+	padding-top: 0.8rem;
+	padding-bottom: 0.8rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+footer a{
+	color: lighten($highlight-color, 20);
+}
+
+footer a:hover,
+footer a:focus,
+footer a:active{
+	color: #fff;
+}
+
+footer i.fa{
+	color: #bd0a0a;
+    position: relative;
+    top: 0.1rem;
+}
+
+
