@@ -5,11 +5,8 @@
 
 $primary-font: 'Open Sans', sans-serif;
 $header-font: 'Raleway', sans-serif;
-$base-colour: rgb(50,50,50);
+$base-color: rgb(50,50,50);
 $highlight-color: rgb(250, 0, 150);
-
-
-
 
 html, body {
 	height: 100%;
@@ -20,7 +17,7 @@ html, body {
  * Apply base body font styles, set optimizeLegibility and normal font-kerning
  */
 body{
-	color: $base-colour;
+	color: $base-color;
 	font-size: 18px;
 	font-family: $primary-font;
 	line-height: 1.4;
@@ -155,6 +152,7 @@ nav{
 		list-style-type: none;
 		text-align: center;
 		font-weight: 600;
+		padding-bottom: 0 !important;
 
 		li{
 			display: inline-block;
@@ -162,12 +160,12 @@ nav{
 
 			a{
 				text-transform: uppercase;
-				color: $base-colour;
+				color: $base-color;
 
 				&:hover,
 				&:active,
 				&:focus{
-					color: lighten($base-colour, 20);
+					color: lighten($base-color, 20);
 				}
 
 				// Fancy underline based of: https://codepen.io/VoxelDavid/pen/Afeoh
@@ -194,6 +192,103 @@ nav{
 	}
 }
 
+ul,
+ol{
+	padding-left: 1.5rem;
+	padding-bottom: 1.6rem;
+}
+
+/**
+ * Do not bottom space inner lists
+ */
+ul ul,
+ul ol,
+ol ol,
+ol ul{
+	padding-bottom: 0;
+}
+
+/**
+ * Super opinionated form styles
+ */
+label{
+	display: block;
+	color: lighten($base-color, 20);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+select,
+textarea{
+	background-color: #fff;
+	border: 1px solid lighten($base-color,40);
+	outline: none;
+	display: block;
+	padding: 0.5rem;
+	font-size: 1rem;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 1rem;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus,
+input[type="email"]:active,
+input[type="email"]:focus,
+input[type="search"]:active,
+input[type="search"]:focus,
+input[type="number"]:active,
+input[type="number"]:focus,
+select:active,
+select:focus,
+textarea:active,
+textarea:focus
+{
+	border: 1px solid lighten($base-color,50);
+	box-shadow: 0 0 2px transparentize($highlight-color, 0.8);
+}
+
+input[type="checkbox"]{
+	margin-bottom: 1rem;
+
+}
+form button{
+	@extend .btn;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+}
+
+
+/**
+ * table styles
+ */
+table{
+	margin-bottom: 1rem;
+	border-collapse: collapse;
+}
+
+th,
+td{
+	padding: 0.4rem;
+}
+
+th{
+	text-align: left;
+	font-weight: 600;
+	color: $highlight-color;
+	border-bottom: 1px solid transparentize($base-color, 0.8);
+}
+
+td{
+	border-bottom: 1px solid transparentize($base-color, 0.9);
+}
+
+tr:last-child td{
+	border-bottom: none;
+}
+
 /**
  * Shallow strip footer to show credits
  */
@@ -208,7 +303,7 @@ footer{
 }
 
 footer a{
-	color: lighten($highlight-color, 20);
+	color: lighten($highlight-color, 40);
 }
 
 footer a:hover,
@@ -216,11 +311,3 @@ footer a:focus,
 footer a:active{
 	color: #fff;
 }
-
-footer i.fa{
-	color: #bd0a0a;
-    position: relative;
-    top: 0.1rem;
-}
-
-

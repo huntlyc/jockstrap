@@ -30,11 +30,10 @@
             This strap uses the following fonts:
         </p>
         <ul>
-            <li>Open Sans: for body text</li>
-            <li>Raleway: for heading text</li>
-            <li>Inconsolata: for monospace text</li>
+            <li><span class="opensans">Open Sans</span>: for body text</li>
+            <li><span class="raleway">Raleway</span>: for heading text</li>
+            <li><span class="inconsolata">Inconsolata</span>: for monospace text</li>
         </ul>
-        <hr>
         <h1>This is a heading 1</h1>
         <h2>This is a heading 2</h2>
         <h3>This is a heading 3</h3>
@@ -43,12 +42,14 @@
         <h6>This is a heading 6</h6>
         <p>This is a paragraph. From here onwards it shall be <a href="http://hipsum.co">Lorem Hipsum</a>&hellip; </p>
 
+        <h2>Section 1</h2>
         <p>
             Lyft enamel pin chicharrones try-hard, next level authentic pop-up pork belly synth occupy lomo lumbersexual. Cold-pressed fixie tacos flannel celiac ennui, umami echo park. Edison bulb activated charcoal art party, before they sold out drinking vinegar cray salvia tousled helvetica godard vinyl live-edge. Echo park four loko 3 wolf moon mumblecore brunch, whatever lomo succulents fingerstache intelligentsia aesthetic microdosing wolf marfa slow-carb. Irony ennui seitan, keytar umami vaporware four loko bicycle rights echo park taxidermy mustache portland deep v. Brooklyn hella vegan tumeric poke. YOLO bushwick mumblecore street art.
         </p>
+        <h3>An unordered list</h3>
         <ul>
             <li>Iceland</li>
-            <li>
+            <li>flax
                 <ul>
                     <li>Craft</li>
                     <li>IPA</li>
@@ -61,31 +62,77 @@
         <p>
             Iceland raw denim pour-over, plaid hexagon normcore pickled. Hammock kinfolk lo-fi artisan. Chia normcore health goth, readymade activated charcoal craft beer fashion axe disrupt pinterest direct trade lo-fi man bun street art. Echo park fingerstache migas flexitarian, slow-carb vegan whatever hashtag etsy williamsburg neutra tumeric authentic af. Seitan poke jean shorts subway tile disrupt enamel pin. Health goth iceland bicycle rights whatever, iPhone blog lumbersexual typewriter. Man bun echo park mustache, vinyl cold-pressed cronut locavore chia ennui chillwave.
         </p>
-        <p>
-            Selvage schlitz post-ironic, distillery banjo marfa cornhole af organic food truck. Try-hard butcher disrupt hammock listicle, twee put a bird on it live-edge affogato pickled fashion axe. Ugh post-ironic chia coloring book, bespoke tilde brooklyn tote bag cornhole woke gluten-free. Echo park forage bicycle rights sartorial hell of hoodie synth, heirloom 8-bit scenester bitters thundercats air plant cardigan ethical. Fashion axe listicle sriracha chillwave, pinterest venmo tumeric tilde. Gluten-free mlkshk cred sartorial yuccie 90's, tumeric mixtape. Single-origin coffee gastropub vaporware heirloom chia.
-        </p>
-        <li>
+        <h3>An ordered list</h3>
+        <ol>
             <li>Iceland</li>
-            <li>
-                <ul>
+            <li>flax
+                <ol>
                     <li>Craft</li>
                     <li>IPA</li>
                     <li>Sourdough</li>
-                </ul>
+                </ol>
             </li>
             <li>Artisan</li>
             <li>Crafts</li>
-        </li>
+        </ol>
         <p>
             Iceland squid blue bottle chillwave, cliche quinoa gastropub messenger bag vinyl. Man bun roof party asymmetrical, hella four loko unicorn gluten-free pinterest butcher jean shorts street art keffiyeh selfies. Activated charcoal lo-fi chicharrones, narwhal hella williamsburg air plant paleo biodiesel iPhone. Craft beer twee hot chicken bicycle rights tousled pinterest quinoa, forage asymmetrical tumeric pop-up franzen. Wayfarers pop-up hoodie ethical, chartreuse humblebrag poutine normcore fixie 8-bit hot chicken green juice everyday carry fap. Chambray meh iPhone raw denim. Put a bird on it poke craft beer, af gochujang literally pitchfork polaroid tofu letterpress snackwave chia.
         </p>
-        <p>
-            Mixtape church-key cold-pressed butcher. Mixtape vape umami, selfies chillwave live-edge actually synth DIY listicle small batch chambray 90's irony wayfarers. Squid neutra messenger bag cronut crucifix, enamel pin etsy poutine hella mumblecore bitters. Pork belly PBR&B drinking vinegar, portland swag intelligentsia taxidermy pop-up. Pork belly enamel pin kogi pinterest, craft beer kitsch microdosing. Selvage live-edge put a bird on it, photo booth meh aesthetic tumeric butcher occupy tilde disrupt. Art party artisan put a bird on it, paleo health goth +1 marfa echo park.
-        </p>
-        <p>
-            Chartreuse locavore vice actually tote bag. Blog man bun street art beard. Pickled lomo snackwave before they sold out vinyl, cronut forage lumbersexual leggings single-origin coffee bushwick ennui. Waistcoat lo-fi irony kitsch typewriter cold-pressed kale chips. Pug aesthetic activated charcoal, kickstarter leggings cornhole everyday carry pour-over kinfolk. Chia put a bird on it shabby chic flexitarian, freegan gentrify butcher. Next level put a bird on it waistcoat everyday carry jean shorts.
-        <p>
     </section>
-    <footer>Created by <a href="http://www.huntlycameron.co.uk/" target="_blank">Huntly Cameron</a> after many years of repeating boilerplate nonsense</footer>
+    <section>
+        <h1 class="section-header">Forms</h1>
+        <p class="intro">
+            Nice chunky input controls, default submit to .btn styles
+        </p>
+        <form action="#form-submit" method="post">
+            <label>Type of enquiry:</label>
+            <select>
+                <option>Complaint</option>
+                <option>Criticism</option>
+                <option>Abuse</option>
+            </select>
+            <label>Name:</label><input type="text" name="yourname" placeholder="yourname">
+            <label>Email:</label><input type="email" name="youremail" placeholder="youremail@provider.net">
+            <label>Address Lookup:</label><input type="search" name="yourname" placeholder="AN11XYZ">
+            <label>Message</label>
+            <textarea rows="5" placeholder="What exactly do you want?"></textarea>
+            <label><input type="checkbox" name="spam">&nbsp;Do <strong>not</strong> check if you <strong>do not</strong> wish to <strong>not</strong> be part of our mailing list</label>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <section>
+        <h1 class="section-header">Other</h1>
+        <p class="intro">
+            Other stuff as I find it and style it.
+        </p>
+        <h2>Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Invoice Number</th>
+                    <th>Order Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bob J.&thinsp;J.&thinsp;Jones</td>
+                    <td>01001</td>
+                    <td>&pound; 23.21</td>
+                </tr>
+                <tr>
+                    <td>Jay</td>
+                    <td>01002</td>
+                    <td>&pound; 1,123.21</td>
+                </tr>
+                <tr>
+                    <td>Mrs Some Random Person</td>
+                    <td>01003</td>
+                    <td>&pound; 123.21</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <footer>Created by <a href="http://www.huntlycameron.co.uk/" target="_blank">Huntly Cameron</a> after repeating boilerplate nonsense time and again&hellip;</footer>
 </body>
 </html>
